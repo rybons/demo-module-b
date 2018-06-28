@@ -32,8 +32,9 @@ resource "aws_instance" "web" {
       type = "ssh"
       user = "ubuntu"
 
-      #   private_key = "${file("demo.pem")}"
-      private_key = "${var.keyname}"
+      private_key = "${file("demo.pem")}"
+
+      #   private_key = "${var.keyname}"
     }
 
     inline = [
