@@ -29,9 +29,11 @@ resource "aws_instance" "web" {
 
   provisioner "remote-exec" {
     connection {
-      type        = "ssh"
-      user        = "ubuntu"
-      private_key = "${file("${path.module}/demo.pem")}"
+      type = "ssh"
+      user = "ubuntu"
+
+      #   private_key = "${file("demo.pem")}"
+      private_key = "${var.keyname}"
     }
 
     inline = [
