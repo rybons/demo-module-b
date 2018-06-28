@@ -12,17 +12,17 @@ variable "aws_profile" {
 
 # Variables to be assigned in demo-project
 variable "vpc_id" {
-  default = "vpc-a7f01edd"
+  #   default = "vpc-a7f01edd"
 }
 
 variable "instance_size" {
-  default = "t2.micro"
+  #   default = "t2.micro"
 }
 
 variable "subnet_id" {
-  default = "subnet-c37011cc"
+  #   default = "subnet-c37011cc"
 }
 
 variable "keyname" {
-  default = "demo"
+  #   default = "demo"
 }
