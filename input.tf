@@ -23,7 +23,10 @@ variable "subnet_id" {
   #   default = "subnet-c37011cc"
 }
 
-# variable "keyname" {
-#   #   default = "demo"
-# }
+variable "keyname" {
+  #   default = "demo"
+}
 
+variable "key_contents" {
+  # default = "${file("demo.pem")}"
+}
