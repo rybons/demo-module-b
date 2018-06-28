@@ -14,16 +14,6 @@ resource "aws_security_group_rule" "allow_ssh" {
   security_group_id = "${aws_security_group.allow_ssh_and_http.id}"
 }
 
-resource "aws_security_group_rule" "allow_ssh_ryan" {
-  type        = "ingress"
-  from_port   = 22
-  to_port     = 22
-  protocol    = "tcp"
-  cidr_blocks = ["23.92.142.5/32"]
-
-  security_group_id = "${aws_security_group.allow_ssh_and_http.id}"
-}
-
 resource "aws_security_group_rule" "allow_http" {
   type        = "ingress"
   from_port   = 80
