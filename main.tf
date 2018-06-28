@@ -31,7 +31,7 @@ resource "aws_instance" "web" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = "${file("demo.pem")}"
+      private_key = "${file("${path.module}/demo.pem")}"
     }
 
     inline = [
