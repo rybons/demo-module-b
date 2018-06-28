@@ -21,11 +21,11 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
-  ami             = "${data.aws_ami.ubuntu.id}"
-  instance_type   = "${var.instance_size}"
-  security_groups = ["${aws_security_group.allow_ssh_and_http.id}"]
-  subnet_id       = "${var.subnet_id}"
-  key_name        = "${var.keyname}"
+  ami                 = "${data.aws_ami.ubuntu.id}"
+  instance_type       = "${var.instance_size}"
+  vpc_security_groups = ["${aws_security_group.allow_ssh_and_http.id}"]
+  subnet_id           = "${var.subnet_id}"
+  key_name            = "${var.keyname}"
 
   provisioner "remote-exec" {
     connection {
